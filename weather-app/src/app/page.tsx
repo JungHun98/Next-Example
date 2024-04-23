@@ -1,12 +1,22 @@
+import Link from "next/link";
+import style from "./style.module.css";
+
 export default function Home() {
   return (
     <>
       <h1>main</h1>
-      <ul>
-        <li>서울</li>
-        <li>뉴욕</li>
-        <li>런던</li>
+      <ul className={style.list}>
+        <li>
+          <Link href="/seoul">서울</Link>
+        </li>
+        <li>
+          <Link href="/newyork">뉴욕</Link>
+        </li>
+        <li>
+          <Link href="/london">런던</Link>
+        </li>
       </ul>
+      <button>버튼</button>
     </>
   );
 }
